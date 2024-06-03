@@ -12,4 +12,27 @@ urlpatterns = [
     path('multilineChart/', MultilineIncidentTop3Country, name='chart'),
     path('multiBarChart/', multipleBarbySeverity, name='chart'),
     path('stations', views.map_station, name='map-station'),
+
+    path('locationlist', views.LocationList.as_view(), name='location-list'),
+    path('locationlist/add', views.LocationCreateView.as_view(), name='location-add'),
+    path('locationlist/<pk>', views.LocationUpdateView.as_view(), name='location-update'),
+    path('locationlist/<pk>/delete', views.LocationDeleteView.as_view(), name='location-delete'),
+
+    path('weatherconlist', views.WeatherConditionList.as_view(), name='weathercon-list'),
+    path('weatherconlist/add', views.WeatherConditionCreateView.as_view(), name='weathercon-add'),
+    path('weatherconlist/<pk>', views.WeatherConditionUpdateView.as_view(), name='weathercon-update'),
+    path('weatherconlist/<pk>/delete', views.WeatherConditionDeleteView.as_view(), name='weathercon-delete'),
+
+    path('incidents', views.map_incident, name='map-incident'),
+
+    path('incidentlist', views.IncidentList.as_view(), name='incident-list'),
+    path('incidentlist/add', views.IncidentCreateView.as_view(), name='incident-add'),
+    path('incidentlist/<pk>', views.IncidentUpdateView.as_view(), name='incident-update'),
+    path('incidentlist/<pk>/delete', views.IncidentDeleteView.as_view(), name='incident-delete'),
+
+    path('firestatlist', views.FireStationList.as_view(), name='firestat-list'),
+    path('firestatlist/add', views.FireStationCreateView.as_view(), name='firestat-add'),
+    path('firestatlist/<pk>', views.FireStationUpdateView.as_view(), name='firestat-update'),
+    path('firestatlist/<pk>/delete', views.FireStationDeleteView.as_view(), name='firestat-delete'),
+
 ]

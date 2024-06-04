@@ -12,6 +12,9 @@ from django.db.models.functions import ExtractMonth
 
 from django.urls import reverse_lazy
 
+from django.db.models.query import QuerySet
+from django.db.models import Q
+
 from django.db.models import Count
 from datetime import datetime
 

@@ -35,4 +35,14 @@ urlpatterns = [
     path('firestatlist/<pk>', views.FireStationUpdateView.as_view(), name='firestat-update'),
     path('firestatlist/<pk>/delete', views.FireStationDeleteView.as_view(), name='firestat-delete'),
 
+    path('firefighterlist', views.FireFighterList.as_view(), name='firefighter-list'),
+    path('firefighterlist/add', views.FireFighterCreateView.as_view(), name='firefighter-add'),
+    path('firefighterlist/<pk>', views.FireFighterUpdateView.as_view(), name='firefighter-update'),
+    path('firefighterlist/<pk>/delete', views.FireFighterDeleteView.as_view(), name='firefighter-delete'),
+
+    path('firetrucklist', views.FireTruckList.as_view(), name='firetruck-list'),
+    path('firetrucklist/add', views.FireTruckCreateView.as_view(), name='firetruck-add'),
+    path('firetrucklist/<pk>', views.FireTruckUpdateView.as_view(), name='firetruck-update'),
+    path('firetrucklist/<pk>/delete', views.FireTruckDeleteView.as_view(), name='firetruck-delete'),
+
 ]
